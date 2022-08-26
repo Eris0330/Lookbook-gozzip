@@ -1,0 +1,139 @@
+
+body {
+  background-color: rgba(0, 0, 0, 0.03);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shadow {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  right: 0;
+  width: 50%;
+  height: 100%;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+#flipbook {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.hard {
+  color: white;
+  font-weight: bolder;
+  background-color: black;
+}
+.hard.p2 {
+  background: linear-gradient(to right, white 0%, white 55%, #ebebeb 100%);
+}
+.hard.p7 {
+  background: linear-gradient(to left, white 0%, white 55%, #ebebeb 100%);
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pages {
+  position: relative;
+  background-color: white;
+}
+.pages.even {
+  background: linear-gradient(to right, white 0%, white 55%, #ebebeb 100%);
+}
+.pages.even::after {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  width: 500px;
+  top: 0;
+  left: 0;
+  height: 500px;
+}
+.pages.even::before {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  width: 500px;
+  bottom: 0;
+  left: 0;
+  height: 500px;
+}
+.pages.odd {
+  background: linear-gradient(to left, white 0%, white 55%, #ebebeb 100%);
+}
+.pages.odd::after {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  width: 500px;
+  top: 0;
+  right: 0;
+  height: 500px;
+}
+.pages.odd::before {
+  content: "";
+  position: absolute;
+  cursor: pointer;
+  width: 500px;
+  bottom: 0;
+  right: 0;
+  height: 60px;
+}
+
+.button {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  font-size: 50px;
+  margin: 10px;
+  background-color: white;
+  color: black;
+  border: 2px solid #e7e7e7;
+}
+
+.button:hover {
+  background-color: #e7e7e7;
+}
+
+.info {
+  text-align: center;
+  padding-top: 5px;
+}
+
+.background {
+  position: relative;
+}
+
+.gif1 {
+  position: absolute;
+  width: 800px;
+}
+
+.gif2 {
+  position: absolute;
+  width: 800px;
+}
+
+
+.gif3 {
+  position: absolute;
+  width: 800px;
+  left: -290px;
+  top: 80px;
+}
+
+.gif4 {
+  position: absolute;
+  width: 800px;
+  right: -250px;
+}
